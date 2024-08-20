@@ -1,4 +1,5 @@
 import { strict } from "assert";
+import { verify } from "crypto";
 import { type } from "os";
 
 const { Mongoose, default: mongoose } = require("mongoose");
@@ -26,6 +27,11 @@ const userSchema = new mongoose.Schema({
 
     },
     forgotpasswordToken:string,
+    forgotpasswordToeknExpiry:Date,
+    verifyToken:string,
+    verifyTokenExpiry:Date,
+    
+    
     
 })
 
