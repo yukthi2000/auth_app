@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
         unique:true,
     },
     email:{
-        type:stringify,
+        type:String,
         required:[true,"please provide a password"],
     },
     password:{
@@ -26,10 +26,11 @@ const userSchema = new mongoose.Schema({
         default:false,
 
     },
-    forgotpasswordToken:string,
-    forgotpasswordToeknExpiry:Date,
-    verifyToken:string,
-    verifyTokenExpiry:Date,
+    forgotpasswordToken: String,
+    forgotpasswordToeknExpiry: Date,
+    verifyToken: String,
+    verifyTokenExpiry: Date,
+    
     
     
     
